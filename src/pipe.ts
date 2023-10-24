@@ -21,9 +21,9 @@ export class Pipe {
   }
 
   hits(bird: Bird) {
-    if (bird.y + bird.w > this.x && bird.y < this.x + this.w) {
-      if (!(bird.x > this.top && bird.x + bird.w < this.bot)) {
-        return true
+    if (bird.x + bird.w > this.x && bird.x < this.x + this.w) {
+      if (!(bird.y > this.top && bird.y + bird.w < this.bot)) {
+        return true;
       }
     }
     return false

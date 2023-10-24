@@ -35,7 +35,7 @@ class Game {
       const req = requestAnimationFrame(aminate);
       this.bird.show();
       this.bird.drop()
-      if (this.bird.x < 0 || this.bird.x > 1000) cancelAnimationFrame(req);
+      if (this.bird.y < 0 || this.bird.y > 1000) cancelAnimationFrame(req);
       this.pipes.forEach((pipe) =>{ 
        if (pipe.hits(this.bird)) cancelAnimationFrame(req)
         pipe.show()
