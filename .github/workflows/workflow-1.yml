@@ -16,6 +16,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Cancel WorkFlow Here
+        uses: styfle/cancel-workflow-action@0.9.1
+
       - name: Run a one-line script
         run: echo Hello, world!
 
