@@ -21,6 +21,7 @@ jobs:
           CONDITION=true  # Replace this with your actual condition logic
           if [ "$CONDITION" = true ]; then
             echo "Condition met. Cancelling workflow."
+            jobs.cancel()
             exit 0
           fi
 
