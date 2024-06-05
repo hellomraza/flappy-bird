@@ -16,8 +16,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Exit Workflow from here without running throwing an error
-        run: exit 0
+      - name: Check Condition and Cancel Workflow
+        run: |
+          CONDITION=true  # Replace this with your actual condition logic
+          if [ "$CONDITION" = true ]; then
+            echo "Condition met. Cancelling workflow."
+            exit 0
+          fi
 
       - name: Run a one-line script
         run: echo Hello, world!
