@@ -2,6 +2,11 @@ name: Reusable workflows
 
 on:
   workflow_call:
+    inputs:
+      name:
+        required: true
+        type: string
+        description: The name of the workflow.
 
 jobs:
   build:
@@ -18,3 +23,4 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo ${{ github.event.inputs.name }}
